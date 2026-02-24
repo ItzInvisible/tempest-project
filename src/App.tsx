@@ -1,9 +1,5 @@
-export function App() {
-  return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="font-medium">Hello World</div>
-    </div>
-  )
-}
+import { FaqSection1 } from "./components/pro-blocks/landing-page/faq-sections/faq-section-1";
 
-export default App
+export default function App() {
+  return <FaqSection1 />;
+}
