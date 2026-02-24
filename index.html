@@ -1,6 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark" data-theme="dark">
   <head>
+    <!-- Dark mode initializer: respects user preference and storage -->
+    <script>
+      if (localStorage.theme === 'dark' ||
+          (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="The Tempest — A Shakespearean experience" />
@@ -22,7 +31,8 @@
         padding: 0;
         width: 100%;
         height: 100%;
-        background: #000;
+        /* use the CSS custom property so the colour flips in light/dark */
+        background: var(--background, #000);
         overflow-x: hidden;
       }
     </style>

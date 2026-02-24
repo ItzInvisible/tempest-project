@@ -1,5 +1,4 @@
-import { mergeProps } from "@base-ui/react/merge-props";
-import { useRender } from "@base-ui/react/use-render";
+import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
@@ -19,35 +18,46 @@ const taglineVariants = cva(
   },
 );
 
-// state passed to render function and converted to data-* attributes
-type TaglineState = {
-  slot: string;
-  variant: VariantProps<typeof taglineVariants>["variant"] | null;
-};
-
 interface TaglineProps
-  extends useRender.ComponentProps<"div", TaglineState>,
-    VariantProps<typeof taglineVariants> {}
-
-function Tagline({
-  className,
-  variant = "ghost",
-  ...props
-}: TaglineProps) {
-  return useRender<TaglineState, HTMLDivElement>({
-    defaultTagName: "div",
-    props: mergeProps(
-      {
-        className: cn(taglineVariants({ variant }), className),
-      },
-      props
-    ),
-    state: {
-      slot: "tagline",
-      variant,
-    },
-  });
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof taglineVariants> {
+  asChild?: boolean;
 }
+
+const Tagline = React.forwardRef<HTMLDivElement, TaglineProps>(
+  (
+    {
+      className,
+      variant,
+      asChild = false,
+      children,
+      ...props
+    },
+    ref,
+  ) => {
+    const classes = cn(taglineVariants({ variant, className }));
+
+    if (asChild && React.isValidElement(children)) {
+      // merge props into the single child element
+      return React.cloneElement(
+        children,
+        {
+          className: cn(classes, (children.props as any).className),
+          ...props,
+        } as any,
+        (children.props as any).children,
+      ) as React.ReactElement;
+    }
+
+    return (
+      <div ref={ref} className={classes} {...props}>
+        {children}
+      </div>
+    );
+  },
+);
+
+Tagline.displayName = "Tagline";
 
 export { Tagline, taglineVariants };
 
