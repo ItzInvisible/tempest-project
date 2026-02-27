@@ -1,46 +1,68 @@
 "use client";
-
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
 export function TestimonialsSection1() {
   return (
     <section
-      className="bg-muted/40 container-padding-x section-padding-y flex flex-col items-center"
+      className="bg-muted/40 container-padding-x section-padding-y flex flex-col items-center gap-12"
       aria-labelledby="testimonial-title"
     >
-      {/* Content Container */}
-      <div className="flex max-w-2xl flex-col items-center gap-8">
-        {/* Testimonial Quote */}
-        <blockquote
-          id="testimonial-title"
-          className="text-foreground text-center text-lg leading-7 font-medium md:text-xl"
-        >
-          &quot;Shadcn UI Kit for Figma has completely transformed our design
-          process. It&apos;s incredibly intuitive and saves us so much time. The
-          components are beautifully crafted and customizable.&quot;
-        </blockquote>
+      <div className="flex flex-col md:flex-row gap-8 w-full max-w-5xl">
 
-        {/* Author Information */}
-        <div className="flex flex-col items-center gap-4">
-          {/* Author Avatar */}
-          <Avatar className="h-12 w-12 rounded-xl md:h-14 md:w-14">
-            <AvatarImage
-              src="https://github.com/shadcn.png"
-              alt="Giovanni Lowe"
-            />
-          </Avatar>
-
-          {/* Author Details */}
-          <div className="flex items-center gap-2">
-            <span className="text-foreground text-base font-medium">
-              Giovanni Lowe
-            </span>
-            <span className="text-muted-foreground opacity-50">•</span>
-            <span className="text-muted-foreground text-base">
-              CEO at Acme Inc.
-            </span>
+        {/* Testimonial 1 */}
+        <div className="flex flex-1 flex-col items-center gap-8 bg-card rounded-2xl p-8">
+          <blockquote
+            id="testimonial-title"
+            className="text-foreground text-center text-lg leading-7 font-medium md:text-xl"
+          >
+            &quot;I think it is the classic tale of revenge and that at some
+            point all humans feel a need for.&quot;
+          </blockquote>
+          <div className="flex flex-col items-center gap-4">
+            <Avatar className="h-12 w-12 rounded-xl md:h-14 md:w-14">
+              <AvatarImage
+                src="/src/assets/frost.png"
+                alt="Heidi Frost Avatar"
+              />
+            </Avatar>
+            <div className="flex items-center gap-2">
+              <span className="text-foreground text-base font-medium">
+                Heidi Frost
+              </span>
+              <span className="text-muted-foreground opacity-50">•</span>
+              <span className="text-muted-foreground text-base text-center">
+                English 10 Teacher at Lawrenceburg High School
+              </span>
+            </div>
           </div>
         </div>
+
+        {/* Testimonial 2 */}
+        <div className="flex flex-1 flex-col items-center gap-8 bg-card rounded-2xl p-8">
+          <blockquote
+            className="text-foreground text-center text-lg leading-7 font-medium md:text-xl"
+          >
+            &quot;<span className="italic">The Tempest</span> is a harrowing tale of colonization that continues to be relevant hundreds of years later.&quot;
+          </blockquote>
+          <div className="flex flex-col items-center gap-4">
+            <Avatar className="h-12 w-12 rounded-xl md:h-14 md:w-14">
+              <AvatarImage
+                src="/src/assets/wells.jpg"
+                alt="Brenden Wells Avatar"
+              />
+            </Avatar>
+            <div className="flex items-center gap-2">
+              <span className="text-foreground text-base font-medium">
+                Brenden Wells
+              </span>
+              <span className="text-muted-foreground opacity-50">•</span>
+              <span className="text-muted-foreground text-base text-center">
+                English 9 Teacher at Lawrenceburg High School
+              </span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
