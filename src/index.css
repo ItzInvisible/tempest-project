@@ -2,6 +2,8 @@
 @import "tw-animate-css";
 @import "@fontsource-variable/outfit";
 
+@custom-variant dark (&:is(.dark *));
+
 /* =========================
    Global Setup
 ========================= */
@@ -113,5 +115,106 @@ body {
   .section-padding-y {
     padding-top: 4rem;
     padding-bottom: 4rem;
+    padding-block: 4rem;
+  }
+  .heading-xl {
+    font-size: 1.875rem;
+    line-height: 1.2;
+  }
+  .heading-lg {
+    font-size: 1.875rem;
+    line-height: 1.2;
+  }
+  .heading-md {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+  .heading-sm {
+    font-size: 1.5rem;
+    line-height: 1.333;
+  }
+  .container-padding-x {
+    padding-inline: 1.5rem;
+  }
+  .section-title-gap-xl {
+    gap: 1rem;
+  }
+  .section-title-gap-lg {
+    gap: 1rem;
+  }
+  .section-title-gap-md {
+    gap: 1rem;
+  }
+  .section-title-gap-sm {
+    gap: 1rem;
+  }
+}
+
+@theme inline {
+  --animate-meteor: meteor 5s linear infinite;
+  @keyframes meteor {
+  0% {
+    transform: rotate(var(--angle)) translateX(0);
+    opacity: 1;
+    }
+  70% {
+    opacity: 1;
+    }
+  100% {
+    transform: rotate(var(--angle)) translateX(-500px);
+    opacity: 0;
+    }
+  }
+}
+
+@layer base {
+  button {
+    cursor: pointer;
+  }
+  .heading-xl {
+    font-family: var(--font-sans);
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .heading-lg {
+    font-family: var(--font-sans);
+    font-size: 2.25rem;
+    line-height: 1.111;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .heading-md {
+    font-family: var(--font-sans);
+    font-size: 1.875rem;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .heading-sm {
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+    line-height: 1.333;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .container-padding-x {
+    padding-inline: 1.5rem;
+  }
+  .section-padding-y {
+    padding-block: 6rem;
+  }
+  .section-title-gap-xl {
+    gap: 1.5rem;
+  }
+  .section-title-gap-lg {
+    gap: 1.25rem;
+  }
+  .section-title-gap-md {
+    gap: 1.25rem;
+  }
+  .section-title-gap-sm {
+    gap: 1rem;
   }
 }
