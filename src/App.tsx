@@ -15,7 +15,6 @@ return (
         <FeatureSection18/>
         <FaqSection1 />
         <MusicPlayer />
-
       </>
     );
 }
