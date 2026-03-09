@@ -76,37 +76,14 @@ export function FaqSection1() {
           {/* FAQ Item 4 */}
           <AccordionItem value="item-4">
             <AccordionTrigger className="text-left text-base font-medium">
-              Can I create multi-brand design systems with this UI kit?
+              Do Ferdninad and Miranda end up together?
             </AccordionTrigger>
             <AccordionContent className="text-muted-foreground text-sm">
-              Yes, the UI kit is designed to be flexible and can be customized
-              for multiple brands and design systems.
-            </AccordionContent>
-          </AccordionItem>
-
-          {/* FAQ Item 5 */}
-          <AccordionItem value="item-5">
-            <AccordionTrigger className="text-left text-base font-medium">
-              How will this kit save me time?
-            </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-sm">
-              This kit provides pre-built components and consistent styling,
-              reducing development and design time significantly.
-            </AccordionContent>
-          </AccordionItem>
-
-          {/* FAQ Item 6 */}
-          <AccordionItem value="item-6">
-            <AccordionTrigger className="text-left text-base font-medium">
-              How does this improve my collaboration with developers?
-            </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground text-sm">
-              The kit provides a shared language and consistent components that
-              both designers and developers can reference.
+              Yes, The Tempest ends with Ferdinand and Miranda getting married. After overcoming various obstacles and misunderstandings,
+              they are united in love. Prospero, who has been orchestrating events on the island, gives his blessing to their union, and they look forward to a happy future together.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
-
         {/* CTA Card */}
         <div className="bg-muted/60 flex w-full flex-col items-center gap-6 rounded-xl p-6 md:p-8">
           <div className="flex flex-col gap-2 text-center">

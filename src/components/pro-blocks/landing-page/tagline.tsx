@@ -22,42 +22,33 @@ interface TaglineProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof taglineVariants> {
   asChild?: boolean;
+  as?: React.ElementType;
 }
 
-const Tagline = React.forwardRef<HTMLDivElement, TaglineProps>(
-  (
-    {
-      className,
-      variant,
-      asChild = false,
-      children,
-      ...props
-    },
-    ref,
-  ) => {
-    const classes = cn(taglineVariants({ variant, className }));
+function Tagline({
+  className,
+  variant,
+  asChild = false,
+  as: Tag = "div",
+  children,
+  ...props
+}: TaglineProps) {
+  // If asChild is true, clone the child element and merge props onto it
+  if (asChild && React.isValidElement(children)) {
+    return React.cloneElement(children as React.ReactElement<React.HTMLAttributes<HTMLElement>>, {
+      ...props,
+      className: cn(
+        taglineVariants({ variant, className }),
+        (children.props as React.HTMLAttributes<HTMLElement>).className
+      ),
+    });
+  }
 
-    if (asChild && React.isValidElement(children)) {
-      // merge props into the single child element
-      return React.cloneElement(
-        children,
-        {
-          className: cn(classes, (children.props as any).className),
-          ...props,
-        } as any,
-        (children.props as any).children,
-      ) as React.ReactElement;
-    }
-
-    return (
-      <div ref={ref} className={classes} {...props}>
-        {children}
-      </div>
-    );
-  },
-);
-
-Tagline.displayName = "Tagline";
+  return (
+    <Tag className={cn(taglineVariants({ variant, className }))} {...props}>
+      {children}
+    </Tag>
+  );
+}
 
 export { Tagline, taglineVariants };
-
