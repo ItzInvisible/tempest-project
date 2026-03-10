@@ -1,6 +1,9 @@
 "use client";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
+import frostImg from "@/assets/frost.png";
+import wellsImg from "@/assets/wells.jpg";
+
 export function TestimonialsSection1() {
   return (
     <section
@@ -8,7 +11,6 @@ export function TestimonialsSection1() {
       aria-labelledby="testimonial-title"
     >
       <div className="flex flex-col md:flex-row gap-8 w-full max-w-5xl">
-
         {/* Testimonial 1 */}
         <div className="flex flex-1 flex-col items-center gap-8 bg-card rounded-2xl p-8">
           <blockquote
@@ -20,10 +22,7 @@ export function TestimonialsSection1() {
           </blockquote>
           <div className="flex flex-col items-center gap-4">
             <Avatar className="h-12 w-12 rounded-xl md:h-14 md:w-14">
-              <AvatarImage
-                src="/src/assets/frost.png"
-                alt="Heidi Frost Avatar"
-              />
+              <AvatarImage src={frostImg} alt="Heidi Frost Avatar" />
             </Avatar>
             <div className="flex items-center gap-2">
               <span className="text-foreground text-base font-medium">
@@ -46,10 +45,7 @@ export function TestimonialsSection1() {
           </blockquote>
           <div className="flex flex-col items-center gap-4">
             <Avatar className="h-12 w-12 rounded-xl md:h-14 md:w-14">
-              <AvatarImage
-                src="/src/assets/wells.jpg"
-                alt="Brenden Wells Avatar"
-              />
+              <AvatarImage src={wellsImg} alt="Brenden Wells Avatar" />
             </Avatar>
             <div className="flex items-center gap-2">
               <span className="text-foreground text-base font-medium">
@@ -62,7 +58,6 @@ export function TestimonialsSection1() {
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );

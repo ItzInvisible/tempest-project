@@ -3,6 +3,8 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { Tagline } from "@/components/ui/tagline";
 
+import profileImg from "@/assets/profile.jpeg";
+
 export function TestimonialsSection5() {
   return (
     <section
@@ -27,8 +29,7 @@ export function TestimonialsSection5() {
               </p>
               <div className="flex flex-col items-center gap-5 md:flex-row">
                 <Avatar className="h-14 w-14">
-                  <AvatarImage src="src/assets/profile.jpeg" 
-                  alt="Carlos David" />
+                  <AvatarImage src={profileImg} alt="Carlos David" />
                   <AvatarFallback>CD</AvatarFallback>
                 </Avatar>
                 <div className="flex flex-col gap-1 text-center md:text-left">

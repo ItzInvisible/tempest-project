@@ -10,6 +10,13 @@ import {
 import { MorphingText } from "@/components/ui/morphing-text";
 import { InteractiveGridPattern } from "@/components/ui/interactive-grid-pattern";
 
+import prosperoImg from "@/assets/prospero.jpg";
+import shakespeareImg from "@/assets/R.jpg";
+import mirandaImg from "@/assets/miranda.jpg";
+import calibanImg from "@/assets/caliban.jpg";
+import ferdinandImg from "@/assets/ferdinand.jpg";
+import arielImg from "@/assets/ariel.jpg";
+
 export function BentoGrid1() {
   return (
     <section className="relative bg-muted py-20 overflow-hidden">
@@ -56,7 +63,7 @@ export function BentoGrid1() {
             </CardHeader>
             <CardContent className="shakespeare-image flex-1">
               <img
-                src="src/assets/prospero.jpg"
+                src={prosperoImg}
                 alt="Prospero"
                 className="h-full w-full object-cover"
               />
@@ -73,7 +80,7 @@ export function BentoGrid1() {
             </CardHeader>
             <CardContent className="flex-1">
               <img
-                src="src/assets/R.jpg"
+                src={shakespeareImg}
                 alt="Shakespeare"
                 className="h-full w-full object-cover"
               />
@@ -90,7 +97,7 @@ export function BentoGrid1() {
             </CardHeader>
             <CardContent className="flex-1">
               <img
-                src="src/assets/miranda.jpg"
+                src={mirandaImg}
                 alt="Miranda"
                 className="h-full w-full object-cover"
               />
@@ -107,7 +114,7 @@ export function BentoGrid1() {
             </CardHeader>
             <CardContent className="flex-1">
               <img
-                src="src/assets/caliban.jpg"
+                src={calibanImg}
                 alt="Caliban"
                 className="h-full w-full object-cover"
               />
@@ -124,7 +131,7 @@ export function BentoGrid1() {
             </CardHeader>
             <CardContent className="flex-1">
               <img
-                src="src/assets/ferdinand.jpg"
+                src={ferdinandImg}
                 alt="Ferdinand"
                 className="h-full w-full object-cover"
               />
@@ -141,7 +148,7 @@ export function BentoGrid1() {
             </CardHeader>
             <CardContent className="flex-1">
               <img
-                src="src/assets/ariel.jpg"
+                src={arielImg}
                 alt="Ariel"
                 className="h-full w-full object-cover"
               />
