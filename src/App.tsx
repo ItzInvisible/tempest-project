@@ -4,7 +4,7 @@ import { TestimonialsSection1 } from "./components/pro-blocks/landing-page/testi
 import { Separator } from "./components/ui/separator";
 import { FeatureSection18 } from "./components/pro-blocks/landing-page/feature-sections/feature-section-18";
 import MusicPlayer from "./components/ui/music-player";
-import { TestimonialsSection5 } from "./components/pro-blocks/landing-page/testimonials-sections/testimonials-section-5.tsxtsx";
+import { TestimonialsSection5 } from "./components/pro-blocks/landing-page/testimonials-sections/testimonials-section-5.tsx";
 
 export default function App() {
 return (
