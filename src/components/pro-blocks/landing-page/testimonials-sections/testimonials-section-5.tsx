@@ -27,7 +27,7 @@ export function TestimonialsSection5() {
               </p>
               <div className="flex flex-col items-center gap-5 md:flex-row">
                 <Avatar className="h-14 w-14">
-                  <AvatarImage src="/profile.jpeg" alt="Carlos David" />
+                  <AvatarImage src="/carlos.jpeg" alt="Carlos David" />
                   <AvatarFallback>CD</AvatarFallback>
                 </Avatar>
                 <div className="flex flex-col gap-1 text-center md:text-left">
