@@ -18,8 +18,8 @@ export function TestimonialsSection5() {
             </h2>
           </div>
 
-          {/* Row 1 */}
-          <div className="flex flex-col gap-8 md:flex-row md:gap-12">
+          {/* Row 1 - Carlos only */}
+          <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-8">
               <p className="text-foreground text-center text-lg/8 font-medium text-pretty md:text-left">
                 All Front and Back end Development made by Carlos David.
@@ -36,30 +36,6 @@ export function TestimonialsSection5() {
                   </p>
                   <p className="text-muted-foreground text-base leading-6">
                     10th Grade Student LHS
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-border hidden w-[1px] self-stretch md:block" />
-            <Separator className="bg-border md:hidden" orientation="horizontal" />
-
-            <div className="flex flex-col gap-8">
-              <p className="text-foreground text-center text-lg/8 font-medium text-pretty md:text-left">
-                Shadcn UI design designed by Figma, Used in part of layout and
-                sections of the website.
-              </p>
-              <div className="flex flex-col items-center gap-5 md:flex-row">
-                <Avatar className="h-14 w-14">
-                  <AvatarImage src="https://github.com/shadcn.png" alt="Figma" />
-                  <AvatarFallback>FG</AvatarFallback>
-                </Avatar>
-                <div className="flex flex-col gap-1 text-center md:text-left">
-                  <p className="text-foreground text-base leading-6 font-semibold">
-                    Figma
-                  </p>
-                  <p className="text-muted-foreground text-base leading-6">
-                    ShadCN UI Owner
                   </p>
                 </div>
               </div>
