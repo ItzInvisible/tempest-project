@@ -44,12 +44,12 @@ const defaultTabs: TabData[] = [
       {
         title: "Prospero's Backstory",
         description:
-          "Prospero explains he was the rightful Duke of Milan, usurped by his treacherous brother Antonio with the help of Alonso. He and the infant Miranda were cast adrift at sea, eventually landing on this enchanted island.",
+          "Prospero explains he was the rightful Duke of Milan, passed by his treacherous brother Antonio with the help of Alonso. He and the infant Miranda were cast adrift at sea, eventually landing on this enchanted island.",
       },
       {
         title: "Ariel and Caliban Introduced",
         description:
-          "Ariel, the airy spirit Prospero controls, reports on the shipwreck. Caliban, the island's monstrous native inhabitant, is introduced as Prospero's reluctant servant, cursing his master bitterly.",
+          "Ariel, the air spirit Prospero controls, reports on the shipwreck. Caliban, the island's monstrous native inhabitant, is introduced as Prospero's reluctant servant, cursing his master bitterly.",
       },
     ],
   },
@@ -120,7 +120,7 @@ const defaultTabs: TabData[] = [
       {
         title: "The Masque and Its Sudden End",
         description:
-          "The lavish, ethereal masque is abruptly stopped when Prospero suddenly remembers Caliban's assassination plot. Shaken and disturbed, he delivers the famous speech reflecting on the illusory nature of all things.",
+          "The lavish, masque is abruptly stopped when Prospero suddenly remembers Caliban's assassination plot. Shaken and disturbed, he delivers the famous speech reflecting on the illusory nature of all things.",
       },
       {
         title: "Prospero Traps the Conspirators",
